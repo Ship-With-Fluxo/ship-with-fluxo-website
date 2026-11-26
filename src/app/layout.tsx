@@ -37,10 +37,14 @@ export const viewport: Viewport = {
   themeColor: "#fcfbf8",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="flex min-h-full flex-col">
+    <html lang="en" className={inter.variable}>
+      <body className="flex min-h-dvh flex-col">
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
